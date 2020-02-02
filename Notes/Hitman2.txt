@@ -74,4 +74,28 @@ hitman2.exe+62EF980 - 66 C7 46 5B 0101      - mov word ptr [rsi+5B],0101
 is done, where the LSB makes sure the hud is toggled. So 0100 doesn't toggle the hud, 0001 does. 
 
 
+FOV:
+hitman2.AK::WriteBytesMem::Clear+1B0A48A << THIS SETS FOV
+fov is at 1AE2E42B8?
+hitman2.AK::WriteBytesMem::Clear+1B080ED << sets vertical rot?
+vrot is at 1AE2E4370?
 
+struct at 1AE2E3FA0?
+vrot offset +3D0
+hrot offset +3D4
+
+
+
+
+timestop:
+
+142B30680
+142BC8070
+1432B3320
+
+14C5B4A2D - 45 89 A5 80370000  - mov [r13+00003780],r12d <<    writes 0, is constantly happening
+
+14C3866E2 - 41 89 86 80370000  - mov [r14+00003780],eax <<     writes 1, only happens when game is running
+
+
+52905900 - holds cam info?
